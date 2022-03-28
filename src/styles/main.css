@@ -7,6 +7,9 @@
   margin: 0;
 }
 
+
+::-webkit-scrollbar{display: none;}
+
 :root {
   --recent-work-width: 540px;
 }
@@ -70,6 +73,16 @@ h2 {
 
   margin: 150px 0;
   row-gap: 125px;
+}
+
+.Name{
+  position: absolute;
+  top: 7%;
+  left: 38%;
+  font-size: 5em;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
 }
 
 .recent-work {
