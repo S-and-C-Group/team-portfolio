@@ -8,20 +8,40 @@
     <link rel="stylesheet" href="./src/styles/normalize.css">
     <link rel="stylesheet" href="./src/styles/main.css">
 
-    <title>TEAM NAME - POTFOLIO</title>
+    <script defer src="/src/modules/three.js"></script>
+    <script defer src="/src/modules/cannon.js"></script>
+    <script defer src="/src/modules/CannonDebugRenderer.js"></script>
+    <script defer src="/src/script/3D.js" type="module"></script>
+
+    <title>S&C Group</title>
   </head>
   <body>
-    <script src="/src/modules/three.js"></script>
-    <script src="/src/modules/cannon.js"></script>
-    <script src="/src/modules/CannonDebugRenderer.js"></script>
-    <script src="/src/script/3D.js" type="module"></script>
 
-    <header>
-      <div class="Name">S&C Group</div>
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <a class="nav__logo" href="#">S&C</a>
+
+        <ul class="nav__links">
+          <li class="nav__link">
+            <a href="#recent-works">portfolio</a>
+          </li>
+          <li class="nav__link">
+            <a href="#our-service">services</a>
+          </li>
+          <li class="nav__link">
+            <a href="#our-team">team</a>
+          </li>
+        </ul>
+
+        <div class="nav__to-auth">
+          <a href="./src/views/login.html">Log in</a>
+          <a href="./src/views/signup.html">sign up</a>
+        </div>
+      </nav>
+      <h1 class="header__team-name">S&C Group</h1>
     </header>
 
     <main>
-      <section id="home"></section>
       <section id="recent-works">
         <h2>recent works</h2>
         <div class="container">
@@ -32,6 +52,9 @@
             </header>
             <a href="#">
               <img class="recent-work__preview" src="./src/icons/our-projects/sample1.png" alt="sample1" />
+              <div class="recent-work__arrow">
+                →
+              </div>
             </a>
           </div>
           <div class="recent-work">
@@ -41,6 +64,9 @@
             </header>
             <a href="#">
               <img class="recent-work__preview" src="./src/icons/our-projects/sample2.png" alt="sample2" />
+              <div class="recent-work__arrow">
+                →
+              </div>
             </a>
           </div>
           <div class="recent-work">
@@ -50,6 +76,9 @@
             </header>
             <a href="#">
               <img class="recent-work__preview" src="./src/icons/our-projects/sample3.png" alt="sample3" />
+              <div class="recent-work__arrow">
+                →
+              </div>
             </a>
           </div>
           <div class="recent-work">
@@ -59,6 +88,9 @@
             </header>
             <a href="#">
               <img class="recent-work__preview" src="./src/icons/our-projects/sample4.png" alt="sample4" />
+              <div class="recent-work__arrow">
+                →
+              </div>
             </a>
           </div>
         </div>
