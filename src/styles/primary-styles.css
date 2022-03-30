@@ -26,6 +26,10 @@
   border-bottom: 1px solid #FFFF80;
 }
 
+/* .input_primary:invalid {
+  border-bottom: 1px solid #F33E3E;
+} */
+
 .input__container label {
   position: absolute;
   top: calc(50% - 25px / 2);
@@ -36,20 +40,22 @@
   pointer-events: none;
   transform: translateY(-50%);
   transition: all ease-out .18s;
+  user-select: none;
 }
 
-.input_primary:focus ~ label,
-.input_primary:invalid ~ label {
+.input_primary:focus ~ label {
   top: 0;
   transform: translateY(-50%);
   font-size: 0.7em;
 }
 
-.input_primary:invalid {
-  border-bottom: 1px solid #F33E3E;
+.input_primary:valid ~ label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.7em;
 }
 
-/* .input_primary:valid ~ label {
+/* .input_primary:invalid ~ label {
   top: 0;
   transform: translateY(-50%);
   font-size: 0.7em;
