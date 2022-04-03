@@ -1,3 +1,5 @@
+@import './vars.css';
+
 .input__container {
   position: relative;
   width: 100%;
@@ -18,17 +20,21 @@
   transition: all .18s ease-out;
 }
 
+.input_primary:invalid {
+  border-bottom: 1px solid var(--danger-color);
+}
+
+.input_primary.input_start {
+  border-bottom: 1px solid #b6b6b6;
+}
+
 .input_primary:hover {
-  border-bottom: 1px solid #ffffd0;
+  border-bottom: 1px solid #bda674;
 }
 
 .input_primary:focus {
-  border-bottom: 1px solid #FFFF80;
+  border-bottom: 1px solid var(--primary-color);
 }
-
-/* .input_primary:invalid {
-  border-bottom: 1px solid #F33E3E;
-} */
 
 .input__container label {
   position: absolute;
@@ -43,6 +49,18 @@
   user-select: none;
 }
 
+.input_primary:invalid ~ label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.7em;
+}
+
+.input_primary.input_start ~ label {
+  top: calc(50% - 25px / 2);
+  transform: translateY(-50%);
+  font-size: 1em;
+}
+
 .input_primary:focus ~ label {
   top: 0;
   transform: translateY(-50%);
@@ -55,16 +73,16 @@
   font-size: 0.7em;
 }
 
-/* .input_primary:invalid ~ label {
+.input_active ~ label {
   top: 0;
   transform: translateY(-50%);
   font-size: 0.7em;
-} */
+}
 
 .button_primary {
   font-size: 16px;
   padding: 15px 30px;
-  background: #FFFF80;
+  background: var(--primary-color);
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -73,5 +91,5 @@
 }
 
 .button_primary:hover {
-  background: #E9E960;
+  background: var(--primary-hover-color);
 }
