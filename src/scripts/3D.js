@@ -13,9 +13,9 @@ camera.position.x = 0;
 camera.position.y = 0;
 camera.position.z = 10;
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, 721);
-renderer.setClearColor(0x000000);
+renderer.setClearColor(0x000000, 0);
 container.appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 
@@ -42,19 +42,10 @@ for(let i = 0; i<count;i+=2){
     particals.push(new THREE.Mesh(Geometry, material2));
     scene.add(particals[i+1]);
 }
-const loader = new THREE.TextureLoader();
-const Plane = new THREE.BoxGeometry(20, 0.01, 10);
-const Pmaterial = new THREE.MeshBasicMaterial( { map:loader.load('/src/icons/Background.PNG') } );
-let cube = new THREE.Mesh( Plane, Pmaterial );
-cube.position.z = -0.1
-cube.rotation.x = Math.PI/2;
-cube.receiveShadow = true;
-scene.add( cube );
 
 //Физика
 let world = new CANNON.World();
 world.gravity.set(0,0,0);
-let CannonDebugRenderer = new THREE.CannonDebugRenderer(scene, world)
 
 let sphereCursor = new CANNON.Body({
     mass: 0,
@@ -75,7 +66,6 @@ loading();
 function loading(){
     requestAnimationFrame(loading);
     renderer.render(scene, camera);
-    // CannonDebugRenderer.update();
     world.step(1/60);
     for(let i = 0; i<count;i+=2){
         if(particalsSkelete[i].position.x >= 9.5) particalsSkelete[i].position.x = -9.5;

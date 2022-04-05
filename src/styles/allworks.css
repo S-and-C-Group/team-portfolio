@@ -1,0 +1,8 @@
+.filter_works{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    margin-top: 3%;
+}

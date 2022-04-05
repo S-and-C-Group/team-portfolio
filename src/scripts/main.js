@@ -36,3 +36,11 @@ for (let input of primaryInputs) {
     }
   });
 }
+
+function ChatMove(){
+  let button = document.querySelector('.chat__button');
+  let chat = document.querySelector('#chat');
+  let buf = getComputedStyle(button).right;
+  button.style.right = getComputedStyle(chat).right;
+  chat.style.right = buf;
+}

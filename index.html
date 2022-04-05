@@ -10,10 +10,9 @@
 
     <script defer src="./src/scripts/main.js"></script>
 
-    <script defer src="/src/modules/three.js"></script>
-    <script defer src="/src/modules/cannon.js"></script>
-    <script defer src="/src/modules/CannonDebugRenderer.js"></script>
-    <script defer src="/src/scripts/3D.js" type="module"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
+    <script defer src="./src/modules/cannon.js"></script>
+    <script defer src="./src/scripts/3D.js" type="module"></script>
 
     <title>S&C Group</title>
   </head>
@@ -40,7 +39,10 @@
           <a href="./src/views/signup.html">sign up</a>
         </div>
       </nav>
-      <h1 class="header__team-name">S&C Group</h1>
+      <div class="header__team-name">
+        <img src="./src/icons/our-projects/S&C.svg" class="header__teamLogo">
+        <h1 class="header__subtitle">agency of digital design <br> and marketing </h1>
+      </div>
     </header>
 
     <main>
@@ -96,7 +98,7 @@
             </a>
           </div>
         </div>
-        <a class="all-works" href="#">
+        <a class="all-works" href="./src/views/allworks.html">
           <span>all works</span>
           <div class="all-works__arrow">
             <img src="./src/icons/our-projects/right-arrow.svg" alt="right-arrow" />
@@ -127,6 +129,25 @@
             <div class="service__arrow"></div>
           </a>
         </div>
+      </section>
+      <section id="chat">
+        <img src="./src/icons/our-projects/S&CChat.svg" class="chat__logo">
+        <div class="chat__back">
+          <div class="chat__message__win">
+            <div class="message_user">
+              <img src="./src/icons/our-projects/message-user.svg" class="message_user_box">
+            </div>
+            <div class="message_bot">
+              <img src="./src/icons/our-projects/message-bot.svg" class="message_bot_box">
+            </div>
+          </div>
+          <div class="chat__input">
+           <input type="text" class="input__message" placeholder="Message">
+           <img src="./src/icons/our-projects/message-button.svg" class="message__button">
+          </div>
+        </div>
+      </section>
+      <section class="chat__button" onclick="ChatMove()">
       </section>
     </main>
 
