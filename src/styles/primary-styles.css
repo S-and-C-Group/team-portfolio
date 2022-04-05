@@ -1,5 +1,14 @@
 @import './vars.css';
 
+@font-face {
+  font-family: "NeutralFace";
+  src: url(../fonts/NeutralFace.otf);
+}
+
+body {
+  font-family: 'NeutralFace', sans-serif;
+}
+
 .input__container {
   position: relative;
   width: 100%;
@@ -16,6 +25,7 @@
   border-bottom: 1px solid #b6b6b6;
   background: none;
   outline: none;
+  font-family: 'Roboto', sans-serif;
 
   transition: all .18s ease-out;
 }
@@ -47,6 +57,7 @@
   transform: translateY(-50%);
   transition: all ease-out .18s;
   user-select: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 .input_primary:invalid ~ label {

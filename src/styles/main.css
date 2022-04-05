@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 @import './vars.css';
 
+@font-face {
+  font-family: "NeutralFace";
+  src: url(../fonts/NeutralFace.otf);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -17,7 +22,7 @@ body {
   color: #fff;
 
   /* temporary */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'NeutralFace', sans-serif;
   font-size: 16px;
 
   background-image: url(../icons/noise-bg.png);
@@ -83,13 +88,15 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
 
   top: 0;
   left: 0;
 
   width: 100%;
-  padding: 35px 60px 0;
+  padding: 15px 60px;
+
+  background: #121212;
 
   z-index: 2;
 }
