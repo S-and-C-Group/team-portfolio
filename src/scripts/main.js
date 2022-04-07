@@ -16,8 +16,8 @@ const openBurgerMenu = document.querySelector(".nav__menu-button"),
 
 const burgerMenu = document.querySelector(".nav__burger-menu");
 
-openBurgerMenu.addEventListener("click", () => burgerMenu.classList.add("burger-menu_active"));
-closeBurgerMenu.addEventListener("click", () => burgerMenu.classList.remove("burger-menu_active"));
+openBurgerMenu?.addEventListener("click", () => burgerMenu.classList.add("burger-menu_active"));
+closeBurgerMenu?.addEventListener("click", () => burgerMenu.classList.remove("burger-menu_active"));
 
 let burgerMenuLinks = document.querySelectorAll(".burger-menu__link");
 for (let link of burgerMenuLinks) {
