@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="./src/styles/normalize.css">
     <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/adaptive.css">
 
+    <!-- <script defer src="./src/scripts/SmoothScroll.js"></script> -->
     <script defer src="./src/scripts/main.js"></script>
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
@@ -20,7 +22,7 @@
 
     <header class="main-header">
       <nav class="main-header__nav">
-        <a class="nav__logo" href="#">S&C</a>
+        <a class="nav__logo" href="./index.html">S&C</a>
 
         <ul class="nav__links">
           <li class="nav__link">
@@ -38,10 +40,33 @@
           <a href="./src/views/login.html">Log in</a>
           <a href="./src/views/signup.html">sign up</a>
         </div>
+
+        <img class="nav__menu-button" src="./src/icons/our-projects/menu.svg" alt="menu" />
+
+        <div class="nav__burger-menu">
+          <img class="burger-menu__close-button" src="./src/icons/our-projects/exit.svg" alt="menu" />
+
+          <ul class="burger-menu__links">
+            <li class="burger-menu__link">
+              <a href="#recent-works">portfolio</a>
+            </li>
+            <li class="burger-menu__link">
+              <a href="#our-service">services</a>
+            </li>
+            <li class="burger-menu__link">
+              <a href="#our-team">team</a>
+            </li>
+          </ul>
+
+          <div class="burger-menu__to-auth">
+            <a class="to-login" href="./src/views/login.html">Log in</a>
+            <a class="to-signup" href="./src/views/signup.html">sign up</a>
+          </div>
+        </div>
       </nav>
       <div class="header__team-name">
-        <img src="./src/icons/our-projects/S&C.svg" class="header__teamLogo">
-        <h1 class="header__subtitle">agency of digital design <br> and marketing </h1>
+        <img draggable="false" src="./src/icons/our-projects/S&C.svg" class="header__teamLogo">
+        <h1 class="header__subtitle">agency of digital design <br> and marketing</h1>
       </div>
     </header>
 
@@ -142,8 +167,8 @@
             </div>
           </div>
           <div class="chat__input">
-           <input type="text" class="input__message" placeholder="Message">
-           <img src="./src/icons/our-projects/message-button.svg" class="message__button">
+            <input type="text" class="input__message" placeholder="Message">
+            <img src="./src/icons/our-projects/message-button.svg" class="message__button">
           </div>
         </div>
       </section>

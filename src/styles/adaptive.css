@@ -1,0 +1,161 @@
+@media screen and (max-width: 1000px) {
+  main {
+    margin: 0 70px;
+  }
+
+  #recent-works {
+    margin: 100px 0 200px;
+  }
+
+  .our-serveces_service {
+    padding: 25px 10px;
+  }
+
+  .service__arrow {
+    right: 10px;
+    height: 100%;
+    width: 60px;
+  }
+
+  .our-serveces_service:hover > .service__arrow {
+    right: 5px;
+  }
+
+  .service__number {
+    margin-right: 50px;
+  }
+
+  .recent-work__arrow {
+    width: 70px;
+    height: 70px;
+    bottom: 0px;
+    left: 30px;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 4em;
+  }
+
+  #recent-works > .container {
+    margin: 90px 0 50px;
+    row-gap: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    margin: 0 50px;
+  }
+
+  .main-header__nav {
+    padding: 15px 30px;
+  }
+
+  .all-works__arrow {
+    width: 80px;
+    height: 80px;
+  }
+
+  .all-works {
+    font-size: 2em;
+  }
+
+  .all-works > span {
+    margin-right: 40px;
+  }
+
+  #our-service > h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  #recent-works {
+    margin: 100px 0 100px;
+  }
+
+  #recent-works > .container {
+    flex-direction: column;
+    margin: 50px 0;
+    row-gap: 60px;
+  }
+
+  .recent-work {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .recent-work__arrow {
+    width: 80px;
+    height: 80px;
+    bottom: 0px;
+    left: 30px;
+    font-size: 1.5em;
+  }
+
+  .recent-work__name {
+    font-size: 2em;
+  }
+
+  .recent-work__service-type {
+    font-size: 1.2em;
+  }
+
+  .service__description {
+    font-size: 1.2em;
+  }
+
+  .our-serveces_service:hover > .service__description {
+    padding-left: 15px;
+  }
+
+  .service__number {
+    margin-right: 20px;
+  }
+
+  .service__arrow {
+    right: 10px;
+    height: 60%;
+    width: 50px;
+  }
+
+  .our-serveces_service:hover > .service__arrow {
+    right: 5px;
+  }
+
+  .header__subtitle {
+    padding: 0 10px;
+  }
+
+  .nav__to-auth,
+  .nav__links {
+    display: none;
+  }
+
+  .nav__menu-button {
+    display: block;
+  }
+
+  .burger-menu_active {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    margin: 0 20px;
+  }
+
+  .header__subtitle {
+    font-size: 0.6em;
+  }
+}

@@ -4,15 +4,28 @@ for (let smoothLink of smoothLinks) {
         e.preventDefault();
         const id = smoothLink.getAttribute('href');
 
-        document.querySelector(id).scrollIntoView({
+        document.querySelector(id)?.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
     });
 };
 
-let primaryInputs = document.querySelectorAll(".auth-form .input_primary");
+const openBurgerMenu = document.querySelector(".nav__menu-button"),
+  closeBurgerMenu = document.querySelector(".burger-menu__close-button");
 
+const burgerMenu = document.querySelector(".nav__burger-menu");
+
+openBurgerMenu.addEventListener("click", () => burgerMenu.classList.add("burger-menu_active"));
+closeBurgerMenu.addEventListener("click", () => burgerMenu.classList.remove("burger-menu_active"));
+
+let burgerMenuLinks = document.querySelectorAll(".burger-menu__link");
+for (let link of burgerMenuLinks) {
+  link.addEventListener("click", () => burgerMenu.classList.remove("burger-menu_active"));
+}
+
+
+let primaryInputs = document.querySelectorAll(".auth-form .input_primary");
 for (let input of primaryInputs) {
   input.classList.add("input_start");
 
