@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/allworks.css">
+    <link rel="stylesheet" href="../styles/adaptive.css">
 
     <!-- <script defer src="../scripts/SmoothScroll.js"></script> -->
     <script defer src="../scripts/main.js"></script>
@@ -16,26 +17,49 @@
 </head>
 <body>
 
-    <nav class="main-header__nav">
-        <a class="nav__logo" href="../../index.html">S&C</a>
+  <nav class="main-header__nav">
+    <a class="nav__logo" href="./index.html">S&C</a>
 
-        <ul class="nav__links">
-          <li class="nav__link">
-            <a href="#recent-works">portfolio</a>
-          </li>
-          <li class="nav__link">
-            <a href="#our-service">services</a>
-          </li>
-          <li class="nav__link">
-            <a href="#our-team">team</a>
-          </li>
-        </ul>
+    <ul class="nav__links">
+      <li class="nav__link">
+        <a href="#recent-works">portfolio</a>
+      </li>
+      <li class="nav__link">
+        <a href="#our-service">services</a>
+      </li>
+      <li class="nav__link">
+        <a href="#our-team">team</a>
+      </li>
+    </ul>
 
-        <div class="nav__to-auth">
-          <a href="./login.html">Log in</a>
-          <a href="./signup.html">sign up</a>
-        </div>
-    </nav>
+    <div class="nav__to-auth">
+      <a href="./src/views/login.html">Log in</a>
+      <a href="./src/views/signup.html">sign up</a>
+    </div>
+
+    <img class="nav__menu-button" src="../icons/our-projects/menu.svg" alt="menu" />
+
+    <div class="nav__burger-menu">
+      <img class="burger-menu__close-button" src="../icons/our-projects/exit.svg" alt="menu" />
+
+      <ul class="burger-menu__links">
+        <li class="burger-menu__link">
+          <a href="#recent-works">portfolio</a>
+        </li>
+        <li class="burger-menu__link">
+          <a href="#our-service">services</a>
+        </li>
+        <li class="burger-menu__link">
+          <a href="#our-team">team</a>
+        </li>
+      </ul>
+
+      <div class="burger-menu__to-auth">
+        <a class="to-login" href="./src/views/login.html">Log in</a>
+        <a class="to-signup" href="./src/views/signup.html">sign up</a>
+      </div>
+    </div>
+  </nav>
     <section id="recent-works" style="margin: 0; padding: 1% 10%;">
         <h2 style="padding-top: 10%;">our works</h2>
         <div class="filter_works">

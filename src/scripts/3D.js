@@ -65,7 +65,11 @@ for(let i = 0; i < count; i++){
 loading();
 function loading(){
     requestAnimationFrame(loading);
+    renderer.setSize(window.innerWidth, 721);
     renderer.render(scene, camera);
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
     world.step(1/60);
     for(let i = 0; i<count;i+=2){
         if(particalsSkelete[i].position.x >= 9.5) particalsSkelete[i].position.x = -9.5;

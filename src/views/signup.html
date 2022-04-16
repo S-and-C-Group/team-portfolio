@@ -7,14 +7,58 @@
 
     <link rel="stylesheet" href="../styles/auth.css">
     <link rel="stylesheet" href="../styles/primary-styles.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/adaptive.css">
 
     <script defer src="../scripts/main.js"></script>
 
     <title>Sign up</title>
   </head>
   <body>
+    <nav class="main-header__nav">
+      <a class="nav__logo" href="../../index.html">S&C</a>
 
-    <form class="auth-form">
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a href="#recent-works">portfolio</a>
+        </li>
+        <li class="nav__link">
+          <a href="#our-service">services</a>
+        </li>
+        <li class="nav__link">
+          <a href="#our-team">team</a>
+        </li>
+      </ul>
+
+      <div class="nav__to-auth">
+        <a href="./login.html">Log in</a>
+        <a href="./signup.html">sign up</a>
+      </div>
+
+      <img class="nav__menu-button" src="../icons/our-projects/menu.svg" alt="menu" />
+
+      <div class="nav__burger-menu">
+        <img class="burger-menu__close-button" src="../icons/our-projects/exit.svg" alt="menu" />
+
+        <ul class="burger-menu__links">
+          <li class="burger-menu__link">
+            <a href="#recent-works">portfolio</a>
+          </li>
+          <li class="burger-menu__link">
+            <a href="#our-service">services</a>
+          </li>
+          <li class="burger-menu__link">
+            <a href="#our-team">team</a>
+          </li>
+        </ul>
+
+        <div class="burger-menu__to-auth">
+          <a class="to-login" href="./login.html">Log in</a>
+          <a class="to-signup" href="./signup.html">sign up</a>
+        </div>
+      </div>
+    </nav>
+    <form class="auth-form" >
       <h1>sign up</h1>
       <div class="input__container">
         <input minlength="1" class="input_primary" type="text" required />
@@ -32,8 +76,36 @@
         <input minlength="6" class="input_primary" type="password" required />
         <label>Repeat password</label>
       </div>
-
       <button class="button_primary">Sign Up</button>
+    </form>
+
+    <form class="auth-form-mobile" name="authMobile">
+      <h1>sign up</h1>
+      <div class="sing_cont">
+        <div class="sing_cont_one">
+          <div class="input__container" style="width: 200%;">
+            <input minlength="1" class="input_primary" type="text" name="Username" required />
+            <label>User name</label>
+          </div>
+          <div class="input__container" style="width: 200%;">
+            <input class="input_primary" type="email" name="Email" required />
+            <label>E-mail</label>
+          </div>
+          <div class="button_primary button_next" onclick="SignUpMove()" style="width: 200%; color: black; text-align: center;">Next</div>
+        </div>
+  
+        <div class="sing_cont_two">
+          <div class="input__container" style="width: 200%;">
+            <input minlength="6" class="input_primary" type="password" name="pass" required />
+            <label>Password</label>
+          </div>
+          <div class="input__container" style="width: 200%;">
+            <input minlength="6" class="input_primary" type="password" name="reapPass" required />
+            <label>Repeat password</label>
+          </div>
+          <button class="button_primary" style="width: 200%;">Sign Up</button>
+        </div>
+      </div>
     </form>
 
   </body>
